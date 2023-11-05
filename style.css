@@ -1,0 +1,109 @@
+/* Font famile Links */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+/* End of font links */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    width: 100%;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+#container {
+    border: 1px solid black;
+    height: 80%;
+    width: 50%;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+#input {
+    margin: 1%;
+    width: 98%;
+    display: flex;
+}
+
+#input input {
+    width: 80%;
+    height: 8vh;
+    margin: 0 .5%;
+    border-radius: 5px;
+    border: 2px solid gray;
+    font-size: larger;
+    font-family: 'Varela Round', sans-serif;
+    padding: 0 2%;
+}
+
+#input button {
+    padding: 1% 1%;
+    font-size: larger;
+    border-radius: 5px;
+    width: 19%;
+    font-family: 'Varela Round', sans-serif;
+    height: 8vh;
+}
+
+#todo-list {
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+span {
+    width: 82%;
+    min-height: 6vh;
+    margin: .5%;
+    border-radius: 5px;
+    font-size: 25px;
+    font-family: 'Macondo', cursive;
+    font-weight: 1000;
+    padding: 0 2%;
+    display: flex;
+    align-items: center;
+    border: 2px solid gray;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+}
+
+span::after {
+    position: absolute;
+    content: 'Double click to remove';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: .5s ease-in-out;
+}
+
+span:hover {
+    color: transparent;
+}
+
+span:hover::after {
+    color: white;
+    opacity: 1;
+}
